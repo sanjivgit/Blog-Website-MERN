@@ -14,7 +14,7 @@ function Post() {
         <hr />
         <span className="postDate">1 hour ago</span>
       </div>
-      <p className="postDec">
+      <p className="postDesc">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam dolorum
         eius aliquam optio tempora suscipit. Lorem ipsum dolor sit amet
         consectetur adipisicing elit. Architecto dolore sapiente doloremque,
