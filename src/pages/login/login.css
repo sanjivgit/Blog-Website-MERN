@@ -1,0 +1,59 @@
+.login {
+  height: calc(100vh - 60px);
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.5),
+      rgba(255, 255, 255, 0.5)
+    ),
+    url("https://media.istockphoto.com/photos/user-typing-password-on-computer-security-code-picture-id1283382475?b=1&k=20&m=1283382475&s=170667a&w=0&h=DBb3Xbr8lwlpl0R8apndP1ohBoDKW280jSTsvDq3vEo=");
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "Lora", serif;
+}
+
+.loginTitle {
+  font-size: 50px;
+  font-weight: 600;
+}
+
+.loginForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.loginForm > label {
+  margin: 10px 0;
+  font-weight: 600;
+}
+
+.loginForm > input {
+  padding: 10px;
+  border: none;
+  outline: none;
+}
+
+.loginButton {
+  margin-top: 20px;
+  border: none;
+  background-color: lightcoral;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.loginRegisterButton {
+  position: absolute;
+  top: 70px;
+  right: 20px;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  background-color: teal;
+  color: white;
+  cursor: pointer;
+}

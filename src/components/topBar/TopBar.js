@@ -1,7 +1,9 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./topBar.css";
 
 function TopBar() {
+  const user = false;
   return (
     <div className="tobBar">
       <div className="topBarLeft">
@@ -12,15 +14,47 @@ function TopBar() {
       </div>
       <div className="topBarCenter">
         <ul className="topBarList">
-          <li className="topBarListItem">HOME</li>
-          <li className="topBarListItem">ABOUT</li>
-          <li className="topBarListItem">CONTACT</li>
-          <li className="topBarListItem">WRITE</li>
-          <li className="topBarListItem">LOGOUT</li>
+          <li className="topBarListItem">
+            <Link className="link" to="/">
+              HOME
+            </Link>
+          </li>
+          <li className="topBarListItem">
+            <Link className="link" to="/about">
+              ABOUT
+            </Link>
+          </li>
+          <li className="topBarListItem">
+            <Link className="link" to="/contact">
+              CONTACT
+            </Link>
+          </li>
+          <li className="topBarListItem">
+            <Link className="link" to="/write">
+              WRITE
+            </Link>
+          </li>
+          {user && <li className="topBarListItem">LOGOUT</li>}
         </ul>
       </div>
       <div className="topBarRight">
-        <img className="topBarImg" src="/images/logo.jpeg" alt="" />
+        {user ? (
+          <img className="topBarImg" src="/images/logo.jpeg" alt="" />
+        ) : (
+          <ul className="topBarList">
+            <li className="topBarListItem">
+              <Link className="link" to="/login">
+                LOGIN
+              </Link>
+            </li>
+            <li className="topBarListItem">
+              <Link className="link" to="/register">
+                REGISTER
+              </Link>
+            </li>
+          </ul>
+        )}
+
         <i className="topBarImgIcon fa-solid fa-magnifying-glass"></i>
       </div>
     </div>
