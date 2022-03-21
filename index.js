@@ -6,11 +6,15 @@ const userRoute = require("./routes/users");
 const postRoute = require("./routes/posts");
 const categoryRoute = require("./routes/categories");
 const multer = require("multer");
+const cors = require("cors");
+const path = require("path");
 
 const app = express();
 dotenv.config();
 const port = process.env.PORT || 8000;
 app.use(express.json());
+app.use(cors());
+app.use("/images", express.static(path.join(__dirname, "/images")));
 
 app.get("/", (req, res) => {
   res.send("Hello guys!!!");
@@ -26,7 +30,7 @@ mongoose
 
 const storage = multer.diskStorage({
   destination: (req, file, callback) => {
-    callback(null, images);
+    callback(null, "images");
   },
   filename: (req, file, callback) => {
     callback(null, req.body.name);

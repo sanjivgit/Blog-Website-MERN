@@ -17,8 +17,8 @@ router.post("/", async (req, res) => {
 
 router.get("/", async (req, res) => {
   try {
-    const category = await Categories.find();
-    res.status(200).json(category);
+    const categ = await Categories.find();
+    res.status(200).json(categ);
   } catch (err) {
     res.status(500).json(err);
   }
